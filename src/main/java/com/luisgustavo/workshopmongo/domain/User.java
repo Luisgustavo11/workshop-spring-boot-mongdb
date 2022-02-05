@@ -11,16 +11,16 @@ public class User implements Serializable {
 	
 	@Id
 	private String id;
-	private String nmae;
+	private String name;
 	private String email;
 	
 	public User() {
 	}
 
-	public User(String id, String nmae, String email) {
+	public User(String id, String name, String email) {
 		super();
 		this.id = id;
-		this.nmae = nmae;
+		this.name = name;
 		this.email = email;
 	}
 
@@ -32,12 +32,12 @@ public class User implements Serializable {
 		this.id = id;
 	}
 
-	public String getNmae() {
-		return nmae;
+	public String getName() {
+		return name;
 	}
 
-	public void setNmae(String nmae) {
-		this.nmae = nmae;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public String getEmail() {
