@@ -12,20 +12,20 @@ import com.luisgustavo.workshopmongo.dto.AuthorDTO;
 import com.luisgustavo.workshopmongo.dto.CommentDTO;
 
 @Document
-public class Post implements Serializable{
+public class Post implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	private String id;
 	private Date date;
 	private String title;
 	private String body;
 	private AuthorDTO author;
-	
+
 	private List<CommentDTO> comments = new ArrayList<>();
-	
-    private Post() {
-    }
+
+	public Post() {
+	}
 
 	public Post(String id, Date date, String title, String body, AuthorDTO author) {
 		super();
@@ -67,7 +67,7 @@ public class Post implements Serializable{
 	public void setBody(String body) {
 		this.body = body;
 	}
-	
+
 	public AuthorDTO getAuthor() {
 		return author;
 	}
@@ -75,7 +75,7 @@ public class Post implements Serializable{
 	public void setAuthor(AuthorDTO author) {
 		this.author = author;
 	}
-	
+
 	public List<CommentDTO> getComments() {
 		return comments;
 	}
